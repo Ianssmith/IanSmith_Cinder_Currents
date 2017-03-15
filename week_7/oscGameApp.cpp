@@ -33,6 +33,7 @@ public:
     bool mIsConnected;
     
     //// game functions v
+    
     void setAnswer();
     void activatePlayer();
     void recieveChar();
@@ -42,36 +43,29 @@ public:
     void makeMessage(osc::Message);
     
     //// game vars v
-        //answer chosen by judger
-    string answer;
-        //player turn tracker
-    int player = 0;
+    
+    string answer;      //answer chosen by judger
+    int player = 0;     //player turn tracker
     const int maxGuesses = 9;
     int bodypart = 0;
-        //letter guessed by player n
-    char letter;
-        //vector of boolean values to keep track of correct letters and if game is over
-    std::vector<bool> playerstatus;
-        //char to return to players if guess is incorrect
-    char wrongLetter;
-        //boolean flag for if the guess is correct
-    bool correct;
-        //boolean flag for if game is over
-    bool GO = 0;
-        //boolean flag for players win or lose
-    bool win = 0;
-        //introductory text for judger
-    const std::string intro = "Judgment day, pick a word for the defendant: ";
+    char letter;        //letter guessed by player n
+    std::vector<bool> playerstatus;     //vector of boolean values to keep track of correct letters and if game is over
+    string rLetter;       //char to return to players if guess is incorrect(probably could just recycle the 'letter' variable
+    bool correct;       //boolean flag for if the guess is correct
+    bool GO = 0;        //boolean flag for if game is over
+    bool win = 0;       //boolean flag for players win or lose
+    const std::string intro = "Judgment day, pick a word for the defendant: ";      //introductory text for judger
     int numPlayers = 0;
     
 };
 
+////create a vector equal to the length of the answer and store a 'false' in each space
 void oscGameApp::setAnswer()
 {
     answer = "test";
     //answer = inputBox.getInput();     place where judger word is received
     for(int i=0;i<answer.size();i++)
-    {//create a vector equal to the length of the answer and store a 'false' in each space
+    {
         playerstatus.push_back(0);
     }
     while(numPlayers < 2)
@@ -81,69 +75,83 @@ void oscGameApp::setAnswer()
     }
 }
 
-
+////adds 1 to player number each time until it equals total players then reset to first player
 void oscGameApp::activatePlayer()
 {
     player += 1;
     if (player > numPlayers)
-    {//adds 1 to player number each time until it equals total players then reset to first player
+    {
         player = 1;
     }
 }
 
+
+////place where we get the char guessed by players
 void oscGameApp::recieveChar()
 {
     letter = 't';
-    //letter = app.getMessage[0];   place where we get the char guessed by players
+    //letter = app.getMessage[0];
 }
 
+
+////loop through the answer and compare the guessed char to each one
+////if they match change the corresponding vector boolean to 'true'
+////and set correct flag
 void oscGameApp::compareChar(char guess)
 {
     correct = 0;
-    for(int i=0;i<answer.size();i++)
-    {//loop through the answer and compare the guessed char to each one
+    for(std::string::size_type i=0;i<answer.size();i++)
+    {
         if(answer[i] == guess)
-        {//if they match change the corresponding vector boolean to 'true'
+        {
             playerstatus[i] = 1;
-            //and set correct flag to 'true'
             correct = 1;
         }
     }
+    rLetter = letter;
 }
 
+
+////check the status array for the presence of a false
+////if all elements are true game over and players win
 void oscGameApp::compareAnswers()
 {
     if(std::all_of(playerstatus.begin(), playerstatus.end(), [](int i){return i==0;}))
-    {//check the status array for the presence of a false
+    {
         GO = 0;
     }
     else
-    {//if all elements are true gane over and players win
+    {
         GO = 1;
         win = 1;
     }
 }
-       
+
+
+////if players have all body parts gome over and players lose
    void oscGameApp::checkDead()
    {
        if(bodypart == maxGuesses)
-       {//if players have all body parts gome over and players lose
+       {
            GO = 1;
            compareAnswers();
        }
    }
-       
+
+
+////run through the above functions appending the generated values to a message for players
        void oscGameApp::makeMessage(osc::Message msg)
-    {//run through the above functions appending the generated values to a message for players
+    {
        activatePlayer();
        msg.addIntArg(player);
        recieveChar();
        compareChar(letter);
+       msg.addStringArg(rLetter);
        msg.addIntArg(correct);
-        for(int i=0;i<playerstatus.size();i++)
-        {
-            msg.addIntArg(playerstatus[i]);
-        }
+       for(int i=0;i<playerstatus.size();i++)
+       {
+           msg.addIntArg(playerstatus[i]);
+       }
        if(correct == 0)
        {
            bodypart += 1;
