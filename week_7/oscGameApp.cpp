@@ -23,6 +23,7 @@ public:
     void draw();
     void mouseMove( MouseEvent event );
     void mouseDrag( MouseEvent event );
+    void keyUp( KeyEvent event );
     
     //osc::SenderTcp sender;
     float 		positionX;
@@ -46,6 +47,7 @@ public:
     //// game vars v
     
     string answer;      //answer chosen by judger
+    int answerLength;
     int player = 0;     //player turn tracker
     const int maxGuesses = 9;
     int bodypart = 0;
@@ -76,6 +78,7 @@ void oscGameApp::setAnswer()
 {
     answer = "test";
     //answer = inputBox.getInput();     place where judger word is received
+    answerLength = answer.size();
     for(int i=0;i<answer.size();i++)
     {
         playerstatus.push_back(0);
@@ -171,8 +174,8 @@ void oscGameApp::compareAnswers()
     void oscGameApp::makeMessage(osc::Message msg)
     {
        activatePlayer();
+       msg.addIntArg(answerLength);     //Use <- this variable to initialze the length of the boolean vector for the first time.
        msg.addIntArg(player);
-       recieveChar();
        compareChar(letter);
        msg.addStringArg(rLetter);
        msg.addIntArg(correct);
@@ -193,9 +196,7 @@ void oscGameApp::compareAnswers()
        }
    }
        
-////gamecode ^^^
-       
-////osc example code vvv
+
 
 void oscGameApp::setup()
 {
@@ -216,16 +217,22 @@ void oscGameApp::setup()
 
 void oscGameApp::update()
 {
-    //float freq = mMouseLocX / (float)getWindowWidth() * 10.0f;
-    //positionX = cos(freq * getElapsedSeconds()) / 2.0f + .5f;
-    
-    osc::Message message;
-    message.setAddress("/cinder/osc/1");
-    message.addFloatArg(positionX);
-    makeMessage(message);
-    cout<<&message<<endl;
-    message.setRemoteEndpoint(host, port);
-    sender.sendMessage(message);
+    //// Listen for incoming messages
+    recieveChar();
+}
+
+void oscGameApp::keyUp(KeyEvent event)
+{
+    if(event.getCode() == KeyEvent::KEY_RETURN)
+    {
+        osc::Message message;
+        message.setAddress("/cinder/osc/1");
+        //message.addFloatArg(positionX);
+        makeMessage(message);
+        cout<<&message<<endl;
+        message.setRemoteEndpoint(host, port);
+        sender.sendMessage(message);
+    }
 }
 
 void oscGameApp::mouseMove( MouseEvent event )
