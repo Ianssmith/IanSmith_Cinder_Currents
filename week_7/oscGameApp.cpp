@@ -188,8 +188,8 @@ void oscGameApp::setup()
 
 void oscGameApp::update()
 {
-    float freq = mMouseLocX / (float)getWindowWidth() * 10.0f;
-    positionX = cos(freq * getElapsedSeconds()) / 2.0f + .5f;
+    //float freq = mMouseLocX / (float)getWindowWidth() * 10.0f;
+    //positionX = cos(freq * getElapsedSeconds()) / 2.0f + .5f;
     
     osc::Message message;
     message.setAddress("/cinder/osc/1");
@@ -201,12 +201,10 @@ void oscGameApp::update()
 
 void oscGameApp::mouseMove( MouseEvent event )
 {
-    mMouseLocX = event.getX();
 }
 
 void oscGameApp::mouseDrag( MouseEvent event )
 {
-    mouseMove(event);
 }
 
 void oscGameApp::draw()
