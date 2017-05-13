@@ -1,0 +1,433 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		006D720419952D00008149E2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 006D720219952D00008149E2 /* AVFoundation.framework */; };
+		006D720519952D00008149E2 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 006D720319952D00008149E2 /* CoreMedia.framework */; };
+		0091D8F90E81B9330029341E /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0091D8F80E81B9330029341E /* OpenGL.framework */; };
+		00B784B30FF439BC000DE1D7 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784AF0FF439BC000DE1D7 /* Accelerate.framework */; };
+		00B784B40FF439BC000DE1D7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B00FF439BC000DE1D7 /* AudioToolbox.framework */; };
+		00B784B50FF439BC000DE1D7 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B10FF439BC000DE1D7 /* AudioUnit.framework */; };
+		00B784B60FF439BC000DE1D7 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B20FF439BC000DE1D7 /* CoreAudio.framework */; };
+		00B9955A1B128DF400A5C623 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B995581B128DF400A5C623 /* IOKit.framework */; };
+		00B9955B1B128DF400A5C623 /* IOSurface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B995591B128DF400A5C623 /* IOSurface.framework */; };
+		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
+		6CAC242E09C4435AB013BEAF /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = DEF5FE798B9C428DA232CBC2 /* CinderApp.icns */; };
+		769D3E2B9AD24C38AA3204CC /* iansVideoApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8E0B09B4E65941229EBF443E /* iansVideoApp.cpp */; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		9176EE9B1EC6AD53009C8FCE /* iansVideo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9176EE991EC6AD53009C8FCE /* iansVideo.cpp */; };
+		9176EEB31EC6B07E009C8FCE /* poEventCenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9176EE9F1EC6B07E009C8FCE /* poEventCenter.cpp */; };
+		9176EEB41EC6B07E009C8FCE /* poEvents.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9176EEA11EC6B07E009C8FCE /* poEvents.cpp */; };
+		9176EEB51EC6B07E009C8FCE /* poImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9176EEA31EC6B07E009C8FCE /* poImage.cpp */; };
+		9176EEB61EC6B07E009C8FCE /* poMatrixSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9176EEA51EC6B07E009C8FCE /* poMatrixSet.cpp */; };
+		9176EEB71EC6B07E009C8FCE /* poNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9176EEA71EC6B07E009C8FCE /* poNode.cpp */; };
+		9176EEB81EC6B07E009C8FCE /* poNodeContainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9176EEA91EC6B07E009C8FCE /* poNodeContainer.cpp */; };
+		9176EEB91EC6B07E009C8FCE /* poScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9176EEAB1EC6B07E009C8FCE /* poScene.cpp */; };
+		9176EEBA1EC6B07E009C8FCE /* poShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9176EEAD1EC6B07E009C8FCE /* poShape.cpp */; };
+		9176EEBB1EC6B07E009C8FCE /* poTextBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9176EEAF1EC6B07E009C8FCE /* poTextBox.cpp */; };
+		EC30E3888ADC4072A0D98F19 /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC301D5964948F9A7F61AEB /* QuickTime.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		006D720219952D00008149E2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		006D720319952D00008149E2 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		0091D8F80E81B9330029341E /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		00B784AF0FF439BC000DE1D7 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		00B784B00FF439BC000DE1D7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		00B784B10FF439BC000DE1D7 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		00B784B20FF439BC000DE1D7 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		00B995581B128DF400A5C623 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		00B995591B128DF400A5C623 /* IOSurface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOSurface.framework; path = System/Library/Frameworks/IOSurface.framework; sourceTree = SDKROOT; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		1369EB934F324083B290F5F2 /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Resources.h; path = ../include/Resources.h; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		3EC301D5964948F9A7F61AEB /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = System/Library/Frameworks/QuickTime.framework; sourceTree = SDKROOT; };
+		5323E6B10EAFCA74003A9687 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
+		8D1107320486CEB800E47090 /* iansVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iansVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E0B09B4E65941229EBF443E /* iansVideoApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = iansVideoApp.cpp; path = ../src/iansVideoApp.cpp; sourceTree = "<group>"; };
+		908DE069C1E342FEA464E1F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9176EE991EC6AD53009C8FCE /* iansVideo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = iansVideo.cpp; path = ../src/iansVideo.cpp; sourceTree = "<group>"; };
+		9176EE9A1EC6AD53009C8FCE /* iansVideo.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = iansVideo.hpp; path = ../src/iansVideo.hpp; sourceTree = "<group>"; };
+		9176EE9F1EC6B07E009C8FCE /* poEventCenter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = poEventCenter.cpp; path = poScene/src/poScene/poEventCenter.cpp; sourceTree = "<group>"; };
+		9176EEA01EC6B07E009C8FCE /* poEventCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = poEventCenter.h; path = poScene/src/poScene/poEventCenter.h; sourceTree = "<group>"; };
+		9176EEA11EC6B07E009C8FCE /* poEvents.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = poEvents.cpp; path = poScene/src/poScene/poEvents.cpp; sourceTree = "<group>"; };
+		9176EEA21EC6B07E009C8FCE /* poEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = poEvents.h; path = poScene/src/poScene/poEvents.h; sourceTree = "<group>"; };
+		9176EEA31EC6B07E009C8FCE /* poImage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = poImage.cpp; path = poScene/src/poScene/poImage.cpp; sourceTree = "<group>"; };
+		9176EEA41EC6B07E009C8FCE /* poImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = poImage.h; path = poScene/src/poScene/poImage.h; sourceTree = "<group>"; };
+		9176EEA51EC6B07E009C8FCE /* poMatrixSet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = poMatrixSet.cpp; path = poScene/src/poScene/poMatrixSet.cpp; sourceTree = "<group>"; };
+		9176EEA61EC6B07E009C8FCE /* poMatrixSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = poMatrixSet.h; path = poScene/src/poScene/poMatrixSet.h; sourceTree = "<group>"; };
+		9176EEA71EC6B07E009C8FCE /* poNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = poNode.cpp; path = poScene/src/poScene/poNode.cpp; sourceTree = "<group>"; };
+		9176EEA81EC6B07E009C8FCE /* poNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = poNode.h; path = poScene/src/poScene/poNode.h; sourceTree = "<group>"; };
+		9176EEA91EC6B07E009C8FCE /* poNodeContainer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = poNodeContainer.cpp; path = poScene/src/poScene/poNodeContainer.cpp; sourceTree = "<group>"; };
+		9176EEAA1EC6B07E009C8FCE /* poNodeContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = poNodeContainer.h; path = poScene/src/poScene/poNodeContainer.h; sourceTree = "<group>"; };
+		9176EEAB1EC6B07E009C8FCE /* poScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = poScene.cpp; path = poScene/src/poScene/poScene.cpp; sourceTree = "<group>"; };
+		9176EEAC1EC6B07E009C8FCE /* poScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = poScene.h; path = poScene/src/poScene/poScene.h; sourceTree = "<group>"; };
+		9176EEAD1EC6B07E009C8FCE /* poShape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = poShape.cpp; path = poScene/src/poScene/poShape.cpp; sourceTree = "<group>"; };
+		9176EEAE1EC6B07E009C8FCE /* poShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = poShape.h; path = poScene/src/poScene/poShape.h; sourceTree = "<group>"; };
+		9176EEAF1EC6B07E009C8FCE /* poTextBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = poTextBox.cpp; path = poScene/src/poScene/poTextBox.cpp; sourceTree = "<group>"; };
+		9176EEB01EC6B07E009C8FCE /* poTextBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = poTextBox.h; path = poScene/src/poScene/poTextBox.h; sourceTree = "<group>"; };
+		9176EEB11EC6B07E009C8FCE /* poTextureFit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = poTextureFit.h; path = poScene/src/poScene/poTextureFit.h; sourceTree = "<group>"; };
+		9176EEB21EC6B07E009C8FCE /* poVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = poVideo.h; path = poScene/src/poScene/poVideo.h; sourceTree = "<group>"; };
+		DEF5FE798B9C428DA232CBC2 /* CinderApp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = CinderApp.icns; path = ../resources/CinderApp.icns; sourceTree = "<group>"; };
+		F4DC1D85978A47DAA568EE35 /* iansVideo_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = iansVideo_Prefix.pch; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				006D720419952D00008149E2 /* AVFoundation.framework in Frameworks */,
+				006D720519952D00008149E2 /* CoreMedia.framework in Frameworks */,
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				0091D8F90E81B9330029341E /* OpenGL.framework in Frameworks */,
+				5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */,
+				00B784B30FF439BC000DE1D7 /* Accelerate.framework in Frameworks */,
+				00B784B40FF439BC000DE1D7 /* AudioToolbox.framework in Frameworks */,
+				00B784B50FF439BC000DE1D7 /* AudioUnit.framework in Frameworks */,
+				00B784B60FF439BC000DE1D7 /* CoreAudio.framework in Frameworks */,
+				00B9955A1B128DF400A5C623 /* IOKit.framework in Frameworks */,
+				00B9955B1B128DF400A5C623 /* IOSurface.framework in Frameworks */,
+				EC30E3888ADC4072A0D98F19 /* QuickTime.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01B97315FEAEA392516A2CEA /* Blocks */ = {
+			isa = PBXGroup;
+			children = (
+				9176EE9F1EC6B07E009C8FCE /* poEventCenter.cpp */,
+				9176EEA01EC6B07E009C8FCE /* poEventCenter.h */,
+				9176EEA11EC6B07E009C8FCE /* poEvents.cpp */,
+				9176EEA21EC6B07E009C8FCE /* poEvents.h */,
+				9176EEA31EC6B07E009C8FCE /* poImage.cpp */,
+				9176EEA41EC6B07E009C8FCE /* poImage.h */,
+				9176EEA51EC6B07E009C8FCE /* poMatrixSet.cpp */,
+				9176EEA61EC6B07E009C8FCE /* poMatrixSet.h */,
+				9176EEA71EC6B07E009C8FCE /* poNode.cpp */,
+				9176EEA81EC6B07E009C8FCE /* poNode.h */,
+				9176EEA91EC6B07E009C8FCE /* poNodeContainer.cpp */,
+				9176EEAA1EC6B07E009C8FCE /* poNodeContainer.h */,
+				9176EEAB1EC6B07E009C8FCE /* poScene.cpp */,
+				9176EEAC1EC6B07E009C8FCE /* poScene.h */,
+				9176EEAD1EC6B07E009C8FCE /* poShape.cpp */,
+				9176EEAE1EC6B07E009C8FCE /* poShape.h */,
+				9176EEAF1EC6B07E009C8FCE /* poTextBox.cpp */,
+				9176EEB01EC6B07E009C8FCE /* poTextBox.h */,
+				9176EEB11EC6B07E009C8FCE /* poTextureFit.h */,
+				9176EEB21EC6B07E009C8FCE /* poVideo.h */,
+				9176EE9C1EC6B07E009C8FCE /* poScene */,
+			);
+			name = Blocks;
+			sourceTree = "<group>";
+		};
+		080E96DDFE201D6D7F000001 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				8E0B09B4E65941229EBF443E /* iansVideoApp.cpp */,
+				9176EE991EC6AD53009C8FCE /* iansVideo.cpp */,
+				9176EE9A1EC6AD53009C8FCE /* iansVideo.hpp */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				006D720219952D00008149E2 /* AVFoundation.framework */,
+				006D720319952D00008149E2 /* CoreMedia.framework */,
+				00B784AF0FF439BC000DE1D7 /* Accelerate.framework */,
+				00B784B00FF439BC000DE1D7 /* AudioToolbox.framework */,
+				00B784B10FF439BC000DE1D7 /* AudioUnit.framework */,
+				00B784B20FF439BC000DE1D7 /* CoreAudio.framework */,
+				5323E6B10EAFCA74003A9687 /* CoreVideo.framework */,
+				0091D8F80E81B9330029341E /* OpenGL.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				00B995581B128DF400A5C623 /* IOKit.framework */,
+				00B995591B128DF400A5C623 /* IOSurface.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* iansVideo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* iansVideo */ = {
+			isa = PBXGroup;
+			children = (
+				01B97315FEAEA392516A2CEA /* Blocks */,
+				29B97315FDCFA39411CA2CEA /* Headers */,
+				080E96DDFE201D6D7F000001 /* Source */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = iansVideo;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				1369EB934F324083B290F5F2 /* Resources.h */,
+				F4DC1D85978A47DAA568EE35 /* iansVideo_Prefix.pch */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DEF5FE798B9C428DA232CBC2 /* CinderApp.icns */,
+				908DE069C1E342FEA464E1F2 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+				3EC301D5964948F9A7F61AEB /* QuickTime.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9176EE9C1EC6B07E009C8FCE /* poScene */ = {
+			isa = PBXGroup;
+			children = (
+				9176EE9D1EC6B07E009C8FCE /* src */,
+			);
+			path = poScene;
+			sourceTree = "<group>";
+		};
+		9176EE9D1EC6B07E009C8FCE /* src */ = {
+			isa = PBXGroup;
+			children = (
+				9176EE9E1EC6B07E009C8FCE /* poScene */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		9176EE9E1EC6B07E009C8FCE /* poScene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = poScene;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* iansVideo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "iansVideo" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iansVideo;
+			productInstallPath = "$(HOME)/Applications";
+			productName = iansVideo;
+			productReference = 8D1107320486CEB800E47090 /* iansVideo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iansVideo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* iansVideo */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* iansVideo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CAC242E09C4435AB013BEAF /* CinderApp.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9176EEB61EC6B07E009C8FCE /* poMatrixSet.cpp in Sources */,
+				9176EE9B1EC6AD53009C8FCE /* iansVideo.cpp in Sources */,
+				9176EEB51EC6B07E009C8FCE /* poImage.cpp in Sources */,
+				9176EEB41EC6B07E009C8FCE /* poEvents.cpp in Sources */,
+				9176EEB91EC6B07E009C8FCE /* poScene.cpp in Sources */,
+				9176EEB81EC6B07E009C8FCE /* poNodeContainer.cpp in Sources */,
+				9176EEBA1EC6B07E009C8FCE /* poShape.cpp in Sources */,
+				9176EEB71EC6B07E009C8FCE /* poNode.cpp in Sources */,
+				769D3E2B9AD24C38AA3204CC /* iansVideoApp.cpp in Sources */,
+				9176EEB31EC6B07E009C8FCE /* poEventCenter.cpp in Sources */,
+				9176EEBB1EC6B07E009C8FCE /* poTextBox.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iansVideo_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = "\"$(CINDER_PATH)/lib/libcinder_d.a\"";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.libcinder.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = iansVideo;
+				SYMROOT = ./build;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_FAST_MATH = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iansVideo_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"NDEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = "\"$(CINDER_PATH)/lib/libcinder.a\"";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.libcinder.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = iansVideo;
+				STRIP_INSTALLED_PRODUCT = YES;
+				SYMROOT = ./build;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CINDER_PATH = ../..;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
+				CLANG_CXX_LIBRARY = "libc++";
+				ENABLE_TESTABILITY = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" ../include ../blocks/QuickTime/include";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CINDER_PATH = ../..;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
+				CLANG_CXX_LIBRARY = "libc++";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" ../include ../blocks/QuickTime/include";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "iansVideo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iansVideo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
